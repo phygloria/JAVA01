@@ -31,5 +31,7 @@ public class Application02 {
         System.out.println("123"+12);
 
 
+
+
     }
 }
