@@ -13,7 +13,9 @@ public class Application01 {
         * */
 
         System.out.println(java.lang.Math.abs(-7));
-                         //자바라는 패키지 안에 랭 패키지 안에 메쓰 클래스//abs는 메소드함수 (static이 붙어있다)
+                         //자바라는 패키지 안에 랭 패키지 안에 메쓰 클래스//abs는 메소드함수 (static(메모리영역)이 붙어있다)
+
+
 
     }
 
