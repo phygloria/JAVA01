@@ -22,7 +22,6 @@ public class Application02practice {
 
     public String gradeCalculator(int score) {
 
-
         System.out.println("점수를 입력하세요 : ");
 
         if(score >= 100){
@@ -42,5 +41,6 @@ public class Application02practice {
         return "";
 
     }
+
 
 }

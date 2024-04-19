@@ -19,8 +19,15 @@ public class Application01 {
         /*A_for ifFor2 = new A_for();
         ifFor2.gugudan4();*/
 
-        A_for st = new A_for();
-        st.nameage();
+        /*A_for st = new A_for();
+        st.nameage();*/
+
+        /*B_while bWhile = new B_while();
+        bWhile.testSimpleWhileStatement();*/
+
+        // 자료형 변수명 = 값; class도 하나의 자료형이다.
+        C_dowhile cDowhile = new C_dowhile();
+        cDowhile.testSimpledoWhileStatement();
 
 
     }
