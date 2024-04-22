@@ -68,8 +68,8 @@ public class Application01 {
 //            newArray[i] = 10; // 100개의 배열에 10을 대입
 //        }
 
-     Test avg = new Test();
-     avg.average();
+     /*Test avg = new Test();
+     avg.average();*/
 
      Test ag_t = new Test();
      ag_t.avg_test();
