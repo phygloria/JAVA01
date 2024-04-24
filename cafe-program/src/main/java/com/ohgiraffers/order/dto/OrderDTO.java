@@ -83,8 +83,7 @@ public class OrderDTO {
                 ", menuName='" + menuName + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
-                '}';
+                '}'+ System.lineSeparator();
     }
-
 
 }

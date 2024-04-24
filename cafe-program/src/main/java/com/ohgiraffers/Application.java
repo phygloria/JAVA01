@@ -39,11 +39,9 @@ public class Application {
                     int price = sc.nextInt();
 
 
-
                     OrderDTO orderfinal = new OrderDTO(id, menuName, quantity, price);
                     result = orderController.order(orderfinal);
                     System.out.println(orderfinal);
-
 
 
                     break;
@@ -54,9 +52,10 @@ public class Application {
                     orderController.reOrder();
                     break;
                 case 4 : //주문조회
-//                    System.out.println("조회할 주문 입력");
-//                    String orderId = sc.nextLine();
-//
+//                    OrderDTO orderDTO = new OrderDTO();
+                    System.out.println("주문자명 입력 : ");
+//                    orderDTO.setId(sc.nextLine());
+
 //                    result = orderController.orderRead(orderDTO);
                     break;
 
@@ -64,9 +63,6 @@ public class Application {
                     OrderDTO orderDTO = new OrderDTO();
                     System.out.println("전체조회 하시겠습니까? : ");
                     orderDTO.setMenuName(sc.nextLine());
-
-
-                    //*System.out.println(orderDTO);
 
                     result = orderController.orderDetail(orderDTO);
                     break;
