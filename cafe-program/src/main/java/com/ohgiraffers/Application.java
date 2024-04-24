@@ -3,6 +3,7 @@ package com.ohgiraffers;
 import com.ohgiraffers.order.controller.OrderController;
 import com.ohgiraffers.order.dto.OrderDTO;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Application {
@@ -24,19 +25,27 @@ public class Application {
             System.out.println("어떤 메뉴를 동작하시겠습니까?");
             int input = sc.nextInt();
             sc.nextLine();
-            OrderDTO orderDTO = new OrderDTO();
 
             switch (input){
                 case 1 : //주문등록
+
+                    System.out.println("주문자 이름 등록 : ");
+                    String id = sc.nextLine();
                     System.out.println("주문할 메뉴 이름 등록");
-                    orderDTO.setMenuName(sc.nextLine());
+                    String menuName = sc.nextLine();
                     System.out.println("수량을 입력해주세요 : ");
                     int quantity = sc.nextInt();
                     System.out.println("가격을 입력해주세요 : ");
                     int price = sc.nextInt();
-                    orderDTO.setQuantity(quantity, price);
 
-                    result = orderController.order(orderDTO);
+
+
+                    OrderDTO orderfinal = new OrderDTO(id, menuName, quantity, price);
+                    result = orderController.order(orderfinal);
+                    System.out.println(orderfinal);
+
+
+
                     break;
                 case 2 : //주문삭제
                     orderController.orderDelete();
@@ -45,15 +54,19 @@ public class Application {
                     orderController.reOrder();
                     break;
                 case 4 : //주문조회
-                    orderController.orderRead();
+//                    System.out.println("조회할 주문 입력");
+//                    String orderId = sc.nextLine();
+//
+//                    result = orderController.orderRead(orderDTO);
                     break;
 
                 case 5 : //주문전체조회
-
-                    System.out.println("조회할 주문 입력");
+                    OrderDTO orderDTO = new OrderDTO();
+                    System.out.println("전체조회 하시겠습니까? : ");
                     orderDTO.setMenuName(sc.nextLine());
 
-                    /*System.out.println(orderDTO);*/
+
+                    //*System.out.println(orderDTO);
 
                     result = orderController.orderDetail(orderDTO);
                     break;
@@ -63,9 +76,10 @@ public class Application {
                     break;
             }
 
+
             System.out.println(result);
-            /*System.out.println("주문을 종료하시겠습니까?");
-            order = sc.nextBoolean();*/
+            System.out.println("주문을 종료하시겠습니까?");
+            order = sc.nextBoolean();
 
         }
     }

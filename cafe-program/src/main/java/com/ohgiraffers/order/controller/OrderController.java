@@ -5,7 +5,7 @@ import com.ohgiraffers.order.service.OrderService;
 
 public class OrderController {
 
-    private OrderService orderService = new OrderService();
+    private final OrderService orderService = new OrderService();
 
 
     public String order(OrderDTO orderDTO){
@@ -48,6 +48,5 @@ public class OrderController {
         return view;
 
     }
-
 
 }

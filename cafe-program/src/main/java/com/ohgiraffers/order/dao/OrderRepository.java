@@ -5,19 +5,31 @@ import com.ohgiraffers.order.dto.OrderDTO;
 import java.util.ArrayList;
 
 public class OrderRepository {
-    static ArrayList orders = new ArrayList();
+    private final ArrayList orders = new ArrayList();
 
     public String order(OrderDTO orderDTO) {
-        // 0
-        int oldNum = orders.size();
-        orders.add(orderDTO);
-        if(oldNum > orders.size()){
+         boolean id = orders.contains("");
+         orders.add(orderDTO);
+
+        if(!id == orders.contains("")){
             return "등록실패";
         }
         return "등록성공";
-        /*// 1
-        int current = orders.size();*/
+
+
     }
+
+//    public String order(OrderDTO orderDTO) {
+//        // 0
+//        int oldNum = orders.size();
+//        orders.add(orderDTO);
+//        if(oldNum > orders.size()){
+//            return "등록실패";
+//        }
+//        return "등록성공";
+//        /*// 1
+//        int current = orders.size();*/
+//    }
 
     public String orderDetail() {
 
@@ -29,7 +41,5 @@ public class OrderRepository {
         }
         return "조회성공";
     }
-
-
 
 }
