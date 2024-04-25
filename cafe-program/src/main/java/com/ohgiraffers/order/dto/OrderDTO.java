@@ -1,7 +1,5 @@
 package com.ohgiraffers.order.dto;
 
-import java.util.Date;
-
 public class OrderDTO {
     private String id;
     String menuName;
@@ -10,8 +8,6 @@ public class OrderDTO {
 
 
 //    private java.util.Date enrollDate;
-
-
 
     public OrderDTO() {
 
@@ -28,8 +24,6 @@ public class OrderDTO {
 //        this.enrollDate = enrollDate;
 
     }
-
-
 
 
 
