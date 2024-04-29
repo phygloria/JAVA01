@@ -30,6 +30,7 @@ public class OrderRepository {
         if(oldNum >= orderDB.getOrders().size()){
             return "등록실패";
         }
+
         return "등록성공";
 
     }
