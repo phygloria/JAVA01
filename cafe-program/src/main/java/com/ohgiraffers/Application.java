@@ -29,11 +29,9 @@ public class Application {
             switch (choice){
                 case 1 : //주문등록
 
-                    System.out.println("몇 번 주문하시겠나요? : ");
-                    int cnt = sc.nextInt();
-                    sc.nextLine();
-                    OrderDTO[] orders = new OrderDTO[cnt];
-                    for (int i = 0; i < orders.length; i++) {
+
+
+
                         System.out.println("주문자 이름 등록 : ");
                         String id = sc.nextLine();
                         System.out.println("주문할 메뉴 이름 등록");
@@ -44,10 +42,10 @@ public class Application {
                         int price = sc.nextInt();
                         sc.nextLine();
 
-                        orders[i] = new OrderDTO(id, menuName, quantity, price);
-                    }
+                    OrderDTO orders = new OrderDTO(id, menuName, quantity, price);
 
-                    result = orderController.order(orders);
+
+                    result = orderController.order(new OrderDTO[]{orders});
                     System.out.println(result);
                     break;
 
