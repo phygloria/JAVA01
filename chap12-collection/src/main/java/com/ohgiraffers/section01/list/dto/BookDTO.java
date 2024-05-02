@@ -1,17 +1,12 @@
 package com.ohgiraffers.section01.list.dto;
 
 public class BookDTO {
-
     private int number;
     private String title;
     private String author;
     private int price;
 
-
-
-
-    public BookDTO(){
-
+    public BookDTO() {
     }
 
     public BookDTO(int number, String title, String author, int price) {
@@ -19,9 +14,7 @@ public class BookDTO {
         this.title = title;
         this.author = author;
         this.price = price;
-
     }
-
 
     public int getNumber() {
         return number;
@@ -53,5 +46,15 @@ public class BookDTO {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "BookDTO{" +
+                "number=" + number +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
